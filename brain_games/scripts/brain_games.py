@@ -1,4 +1,4 @@
-#file brain_games.py
+#!/usr/bin/env python
 
 
 
