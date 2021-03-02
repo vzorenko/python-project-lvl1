@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.1.0"
+version = "0.1.7"
 description = "Проект игры разума"
 authors = ["Vasiliy <services@zorenko.info>"]
 packages = [
@@ -8,6 +8,7 @@ packages = [
 ]
 
 [tool.poetry.dev-dependencies]
+flake8 = "^3.8.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
