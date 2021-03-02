@@ -1,4 +1,4 @@
-name: MyCheck
+name: Python CI
 
 on:
   - push
@@ -12,6 +12,12 @@ jobs:
         # we want to test our package on several versions of Python
         python-version: [3.6, 3.7, 3.8, 3.9]
     steps:
-      - name: Run linter 
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+        # Linter check
+      - name: Lint check
         run: |
           make lint

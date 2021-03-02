@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.1.7"
+version = "0.1.9"
 description = "Проект игры разума"
 authors = ["Vasiliy <services@zorenko.info>"]
 packages = [
