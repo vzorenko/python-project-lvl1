@@ -1,0 +1,17 @@
+name: MyCheck
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # we want to test our package on several versions of Python
+        python-version: [3.6, 3.7, 3.8, 3.9]
+    steps:
+      - name: Run linter 
+        run: |
+          make lint

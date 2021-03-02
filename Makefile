@@ -18,3 +18,6 @@ patch:
 	poetry build
 	poetry publish --dry-run --username ' ' --password ' '
 	python3 -m pip install --user dist/*.whl
+
+lint:
+	poetry run flake8 brain_games
