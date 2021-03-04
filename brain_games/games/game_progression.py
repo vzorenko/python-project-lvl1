@@ -7,8 +7,6 @@ from pprint import pprint
 import prompt
 import random
 
-import math
-
 
 def game(max_steps=3):
     pprint('What number is missing in the progression?')
