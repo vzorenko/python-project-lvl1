@@ -4,7 +4,7 @@
 """Example project."""
 
 from brain_games.cli import welcome_user, welcome
-from brain_games.games.game_even import game
+from brain_games.games.game_calc import game
 
 
 def main():
