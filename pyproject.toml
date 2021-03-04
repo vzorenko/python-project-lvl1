@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.1.10"
+version = "0.1.17"
 description = "Проект игры разума"
 authors = ["Vasiliy <services@zorenko.info>"]
 packages = [
@@ -16,3 +16,4 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
+brain-even = "brain_games.scripts.brain_even:main"
