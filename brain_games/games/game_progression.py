@@ -14,14 +14,13 @@ def game(max_steps=3):
     pprint('What number is missing in the progression?')
     cur_step = 0
     while True:
-        random1 = random.randrange(1000)
-        random2 = random.randrange(1000)
-        cur_start = min(random1, random2)
-        cur_end = max(random1, random2)
-        cur_steps_count = random.randrange(5, 10)
-        cur_step_add = random.randrange((cur_end - cur_start - 1) // cur_steps_count)
-        cur_range = random.randrange(cur_start, cur_end, cur_step_add)
-        cur_secret_index = random.randrange(cur_steps_count-1)
+        cur_step += 1
+        cur_start = random.randrange(150)
+        cur_steps_count = random.randrange(7, 15)
+        cur_step_add = random.randrange(1, 10)
+        cur_range = list(range(cur_start, cur_start + (cur_step_add * (cur_steps_count + 3)), cur_step_add))
+        cur_secret_index = random.randrange(max(0, cur_steps_count - 1))
+
         cur_secret_value = cur_range[cur_secret_index]
         cur_range[cur_secret_index] = '..'
 
