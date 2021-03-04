@@ -5,21 +5,12 @@
 
 from pprint import pprint
 from random import randrange
+from brain_games.cli import welcome_user, welcome
 import prompt
 
 
-def welcome_user():
-    """Doc string."""
-
-    name = prompt.string('May I have your name? ')
-    pprint('Hello, {}!'.format(name))
-    return name
-
-
-def parity_game():
-    name = welcome_user()
+def game(name, max_steps=3):
     pprint('Answer "yes" if the number is even, otherwise answer "no".')
-    max_steps = 3
     cur_step = 0
     while True:
         cur_step += 1
@@ -30,18 +21,20 @@ def parity_game():
         if ((answer == 'yes') & is_cur_even) | ((answer != 'yes') & (not is_cur_even)):
             print("Correct!")
             if max_steps <= cur_step:
-                print("Congratulations, {}!".format(name))
-                break
+                return True
             else:
                 continue
         else:
             print("'{}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {}".format(answer, name))
-            break
+            return False
 
 
 def main():
     """Doc string."""
-    parity_game()
+    welcome()
+    name = welcome_user()
+    if game(name, 3):
+        print("Congratulations, {}!".format(name))
 
 
 if __name__ == '__main__':

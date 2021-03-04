@@ -3,14 +3,7 @@
 
 """Example project."""
 
-from brain_games.cli import welcome_user
-
-from pprint import pprint
-
-
-def welcome():
-    """Doc string."""
-    pprint('Welcome to the Brain Games!')
+from brain_games.cli import welcome_user, welcome
 
 
 def main():
