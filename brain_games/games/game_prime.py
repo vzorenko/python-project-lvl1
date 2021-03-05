@@ -16,7 +16,8 @@ def is_prime(n):
 
 
 def game(max_steps=3):
-    pprint('Answer "yes" if given number is prime. Otherwise answer "no".')
+    pprint('Answer "yes" if given number is prime. '
+           'Otherwise answer "no".')
     cur_step = 0
     while True:
         cur_step += 1
@@ -27,12 +28,14 @@ def game(max_steps=3):
         print("Question:", cur_number)
         answer = prompt.string('Your answer: ')
 
-        if ((answer == 'yes') & cur_result) | ((answer == 'no') & (not cur_result)):
+        if ((answer == 'yes') & cur_result) | \
+                ((answer == 'no') & (not cur_result)):
             print("Correct!")
             if max_steps <= cur_step:
                 return True
             else:
                 continue
         else:
-            print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(answer, cur_result_txt))
+            print("'{}' is wrong answer ;(. "
+                  "Correct answer was '{}'.".format(answer, cur_result_txt))
             return False

@@ -16,8 +16,12 @@ def game(max_steps=3):
         cur_start = random.randrange(150)
         cur_steps_count = random.randrange(7, 15)
         cur_step_add = random.randrange(1, 10)
-        cur_range = list(range(cur_start, cur_start + (cur_step_add * (cur_steps_count + 3)), cur_step_add))
-        cur_secret_index = random.randrange(max(0, cur_steps_count - 1))
+        cur_range = \
+            list(range(cur_start,
+                       cur_start + (cur_step_add * (cur_steps_count + 3)),
+                       cur_step_add))
+        cur_secret_index = \
+            random.randrange(max(0, cur_steps_count - 1))
 
         cur_secret_value = cur_range[cur_secret_index]
         cur_range[cur_secret_index] = '..'
@@ -28,7 +32,9 @@ def game(max_steps=3):
         try:
             answer = int(str_answer)
         except ValueError:
-            print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(str_answer, cur_secret_value))
+            print("'{}' is wrong answer ;(. "
+                  "Correct answer was '{}'."
+                  .format(str_answer, cur_secret_value))
             return False
 
         if answer == cur_secret_value:
@@ -38,5 +44,7 @@ def game(max_steps=3):
             else:
                 continue
         else:
-            print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(answer, cur_secret_value))
+            print("'{}' is wrong answer ;(. "
+                  "Correct answer was '{}'."
+                  .format(answer, cur_secret_value))
             return False

@@ -24,13 +24,17 @@ def game(max_steps=3):
         cur_operation = random.choice(operations)
         cur_result = cur_operation['func'](cur_number1, cur_number2)
 
-        print("Question: {} {} {}".format(cur_number1, cur_operation['operator_symbol'], cur_number2))
+        print("Question: {} {} {}"
+              .format(cur_number1,
+                      cur_operation['operator_symbol'],
+                      cur_number2))
 
         str_answer = prompt.string('Your answer: ')
         try:
             answer = int(str_answer)
         except ValueError:
-            print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(str_answer, cur_result))
+            print("'{}' is wrong answer ;(. "
+                  "Correct answer was '{}'.".format(str_answer, cur_result))
             return False
 
         if answer == cur_result:
@@ -40,5 +44,6 @@ def game(max_steps=3):
             else:
                 continue
         else:
-            print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(answer, cur_result))
+            print("'{}' is wrong answer ;(. "
+                  "Correct answer was '{}'.".format(answer, cur_result))
             return False

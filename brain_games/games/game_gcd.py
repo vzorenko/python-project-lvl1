@@ -25,7 +25,8 @@ def game(max_steps=3):
         try:
             answer = int(str_answer)
         except ValueError:
-            print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(str_answer, cur_result))
+            print("'{}' is wrong answer ;(. "
+                  "Correct answer was '{}'.".format(str_answer, cur_result))
             return False
 
         if answer == cur_result:
@@ -35,5 +36,6 @@ def game(max_steps=3):
             else:
                 continue
         else:
-            print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(answer, cur_result))
+            print("'{}' is wrong answer ;(. "
+                  "Correct answer was '{}'.".format(answer, cur_result))
             return False
