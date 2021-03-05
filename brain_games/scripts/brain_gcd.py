@@ -14,7 +14,7 @@ def main():
     if game(3):
         print("Congratulations, {}!".format(name))
     else:
-        print("Let's try again, {}".format(name))
+        print("Let's try again, {}!".format(name))
 
 
 if __name__ == '__main__':
