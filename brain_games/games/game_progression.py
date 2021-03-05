@@ -22,7 +22,7 @@ def game(max_steps=3):
         cur_secret_value = cur_range[cur_secret_index]
         cur_range[cur_secret_index] = '..'
 
-        print("Question: {}".format(cur_range))
+        print("Question:", ' '.join(str(e) for e in cur_range))
 
         str_answer = prompt.string('Your answer: ')
         try:
