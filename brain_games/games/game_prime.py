@@ -16,6 +16,7 @@ def is_prime(n):
 
 
 def game(max_steps=3):
+    # Можно добавить вызов функции game_rule()
     pprint('Answer "yes" if given number is prime. '
            'Otherwise answer "no".')
     cur_step = 0
